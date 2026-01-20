@@ -13,23 +13,24 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: Zachary Flynn
+subtitle: Mechatronics, Robotics & Physical AI
+logo: "/assets/images/Logo.png"
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
-minimal_mistakes_skin: default
+  The professional and research portfolio of Zachary Flynn.
+github_username: zachtyeflynn
+url: https://zachtyeflynn.github.io/ZacharyFlynnPortfolio/
+repository: "zachtyeflynn/ZacharyFlynnPortfolio"
 search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "mint"
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 3 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -53,39 +54,43 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
+  name: "Zachary Flynn"
+  location: Montréal, Canada
+  bio    : "Final year student at McGill University who is passionate about the intersection between biomedical and mechatronics engineering."
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "McGill University"
+      icon: "fab fa fa-map-marker"
+    - label: "Contact"
+      icon: "fa fa-envelope"
+      url: "/contact/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/zachary-aidan-flynn/"
+    - label: "Curriculum Vitae"
+      icon: "fas fa-fw fa-file"
+      url: "/assets/files/CV_Zachary_Flynn.pdf"
 
 footer:
+  since: "2026"
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+    - label: "Contact"
+      icon: "fa fa-envelope"
+      url: "/contact/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/zachary-aidan-flynn/"
+    - label: "Curriculum Vitae"
+      icon: "fas fa-fw fa-file"
+      url: "/assets/files/CV_Zachary_Flynn.pdf"
+  
+  atom_feed:
+    path: ""
+    hide: true
 
 defaults:
   # _posts
@@ -94,11 +99,13 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
+      splash: true
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      show_date: false
   # _pages
   - scope:
       path: "_pages"

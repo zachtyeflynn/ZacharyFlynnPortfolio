@@ -1,8 +1,36 @@
 ---
 permalink: /about/
-title: "About"
+title: "About Me"
+classes: wide
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I am a final year bioengineering student at McGill University in Montréal, Canada. I am passionate about designing cutting-edge solutions to outstanding problems in biomedical engineering, medicine and beyond.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Currently, I am a research assistant at the Surgical Performance Enhancement and Robotics (SuPER) center at the McGill University Health Center (MUHC) under the supervision of Professor Amir Hooshiar. My focus is on developing next-generation soft robotic surgical systems which enable and expand surgical access to hard to reach areas of the body.
+
+<div style="display: flex; width: 100%; gap: 10px; margin-bottom: 0.5em;">
+  <img src="{{ '/assets/images/DaVinci.jpg' | relative_url }}" alt="DaVinci" 
+       style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px;">
+</div>
+<p class="course-note" style="margin-top: 0; margin-bottom: 2em;">
+    <small>My first time trying a Da Vinci research unit at the Surgical Performance Enhancement and Robotics (SuPER) center.</small>
+</p>
+While my undergraduate research has thus far focused on surgical robotics, the skills that I have acquired can span many other engineering disciplines. I consider myself to be a lifelong learner who strives to learn new and interesting ways of tackling real-world problems.
+
+<div style="display: flex; width: 100%; gap: 10px; margin-bottom: 0.5em;">
+  <img src="{{ '/assets/images/Conference.jpg' | relative_url }}" alt="Conference" 
+       style="width: 100%; aspect-ratio: 12 / 9; object-fit: cover; border-radius: 8px;">
+</div>
+<p class="course-note" style="margin-top: 0; margin-bottom: 2em;">
+    <small>Presenting my research at the RISEx 2025 conference in Edmonton.</small>
+</p>
+
+Outside of my academic and professional life, I enjoy badminton games with friends, long walks with my dog, cycling and cooking.
+
+<div style="display: flex; width: 100%; gap: 10px; margin-bottom: 0.5em;">
+  <img src="{{ '/assets/images/Indy.jpg' | relative_url }}" alt="Indy" 
+       style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 8px;">
+</div>
+<p class="course-note" style="margin-top: 0;">
+    <small>My golden retriever, India.</small>
+</p>

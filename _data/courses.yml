@@ -1,0 +1,23 @@
+- category: "Robotics & Control"
+  list:
+    - name: "COMP 514: Applied Robotics*"
+      url: "https://coursecatalogue.mcgill.ca/courses/comp-514/"
+    - name: "MECH 513: Control Systems"
+      url: "https://coursecatalogue.mcgill.ca/courses/mech-513/"
+    - name: "MECH 572: Mechanics and Control of Robotic Manipulators**"
+      url: "https://coursecatalogue.mcgill.ca/courses/mech-572/"
+- category: "Data Science"
+  list:
+    - name: "BIEN 350: Biosignals, Systems and Control"
+      url: "https://coursecatalogue.mcgill.ca/courses/bien-350/"
+    - name: "MECH 309: Numerical Methods in Mechanical Engineering**"
+      url: "https://coursecatalogue.mcgill.ca/courses/mech-309/"
+    - name: "MECH 579: Numerical Optimization"
+      url: "https://coursecatalogue.mcgill.ca/courses/mech-579/"
+
+- category: "Machine Learning"
+  list:
+    - name: "COMP 551: Applied Machine Learning"
+      url: "https://coursecatalogue.mcgill.ca/courses/comp-551"
+    - name: "COMP 579: Reinforcement Learning*"
+      url: "https://coursecatalogue.mcgill.ca/courses/comp-579"

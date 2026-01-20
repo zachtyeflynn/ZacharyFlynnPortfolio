@@ -1,0 +1,98 @@
+---
+layout: archive
+classes: wide
+---
+
+{{ content }}
+
+<section class="custom-highlights" style="margin-bottom: 0; padding-bottom: 0;">
+  <h2 class="archive__subtitle" style="font-size: 1.3em; margin-bottom: 1em;">Highlighted Projects</h2>
+  
+  <div class="grid__wrapper">
+    {% assign all_content = site.posts | concat: site.pages %}
+    {% assign highlighted_projects = all_content 
+    | where: "highlight", true 
+    | sort: "highlight_order" %}
+    
+    {% for project in highlighted_projects limit: 3 %}
+      <div class="grid__item" style="margin-bottom: 0;">
+        <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork" style="margin-bottom: 0.5em;">
+          {% if project.header.teaser or project.teaser %}
+            <div class="archive__item-teaser" style="margin-bottom: 10px;">
+              {% assign teaser_img = project.header.teaser | default: project.teaser %}
+              <img src="{{ teaser_img | relative_url }}" alt="" 
+                   style="width: 100%; border-radius: 8px; display: block;">
+            </div>
+          {% endif %}
+          
+          <h3 class="archive__item-title no_toc" itemprop="headline" style="margin-bottom: 0.3em;">
+            <a href="{{ project.url | relative_url }}" rel="permalink">{{ project.title }}</a>
+          </h3>
+          
+          {% if project.excerpt %}
+            <p class="archive__item-excerpt" itemprop="description" style="margin-bottom: 0.5em;">
+              {{ project.excerpt | strip_html | truncate: 150 }}
+            </p>
+          {% endif %}
+        </article>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div style="clear: both; margin-top: -1em;"></div>
+</section>
+
+<hr>
+
+<section class="custom-skills">
+  <h2 class="archive__subtitle" style="font-size: 1.3em; margin-bottom: 1em;">Skills</h2>
+
+  <div class="skills-grid" style="display: flex; flex-wrap: wrap; gap: 10px;">
+
+    {% assign skills = "Python, C/C++, ROS 2, SolidWorks, Fusion 360, Arduino, Electronics, Python Control, Unreal Engine 5, TCP/IP, Git" | split: "," %}
+
+    {% for skill in skills %}
+      {% comment %} 
+         Strip spaces, then slugify to ensure "ROS 2" becomes "ros-2" 
+         to match the ID on your /tags/ page.
+      {% endcomment %}
+      {% assign skill_id = skill | strip | slugify %}
+      
+      <a href="{{ '/tags/#' | append: skill_id | relative_url }}"
+         class="btn btn--inverse"
+         style="border-radius: 20px; padding: 0.5em 1.2em;">
+        {{ skill | strip }}
+      </a>
+    {% endfor %}
+
+  </div>
+</section>
+
+<hr>
+
+<section class="custom-courses">
+  <h2 class="archive__subtitle" style="font-size: 1.3em; margin-bottom: 1.5em;">Coursework</h2>
+  
+  <div class="course-grid" style="display: flex; flex-wrap: wrap; gap: 40px; margin-top: 0;">
+    {% for group in site.data.courses %}
+      <div class="course-category" style="flex: 1 1 200px;">
+        <h3 style="margin-top: 0; font-size: 1em; margin-bottom: 0.5em;">{{ group.category }}</h3>
+        
+        <ul class="course-list" style="list-style-type: disc; margin-left: 0; padding-left: 1.5em;">
+          {% for course in group.list %}
+            <li style="margin-bottom: 1px; font-size: 0.9em;"><a href="{{ course.url }}">{{ course.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+
+  <p style="margin-bottom: 0;">
+  <small>*Course in progress.</small>
+</p>
+<p style="margin-top: 0; margin-bottom: 1em;">
+  <small>**Course was audited. Full transcript available upon request.</small>
+</p>
+</section>
+
+<hr>
